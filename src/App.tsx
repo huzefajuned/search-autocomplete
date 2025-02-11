@@ -8,7 +8,6 @@ function App() {
   const search_API = `https://dummyjson.com/products/search?q=${input}`;
 
   const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
-    console.log("handleOnChange hit!");
     setInput(e.target.value);
   };
 
@@ -16,7 +15,6 @@ function App() {
   const fetchData = () => {
     if (input === "") return setData([]);
     setLoading(true);
-    console.log(" input", input);
     console.log("useEffect Hit!");
     fetch(search_API)
       .then((res) => res.json())
@@ -33,10 +31,9 @@ function App() {
   };
 
   useEffect(() => {
-    fetchData();
+    const timer = setTimeout(() => fetchData(), 400);
+    return () => clearTimeout(timer);
   }, [input]);
-
-  console.log(" data", data);
 
   return (
     <div className=" font-mono p-2 h-screen w-screen flex flex-col justify-start gap-10  items-center  bg-gray-200">
@@ -47,7 +44,7 @@ function App() {
           type="text"
           placeholder="Enter your query!"
           value={input}
-          className="outline-none  border-gray-300 bg-red-50 p-4 border-2 active:outline-red-200   text-xl shadow-2xl  rounded-xl text-black font-normal  placeholder:font-normal placeholder-gray-500  placeholder:text-lg placeholder:space-x-0.5 w-full sm:w-xl  sm:h-13  md:w-2xl md:h-14"
+          className="outline-none  border-gray-300 bg-red-50 p-4 border-2 active:outline-red-200   text-xl shadow-2xl  rounded-xl text-black font-normal  placeholder:font-normal placeholder-gray-500  placeholder:text-lg placeholder:space-x-0.5  h-12   sm:h-13  md:w-2xl md:h-14"
         />
         {/* loading UI , when api is calling */}
 
