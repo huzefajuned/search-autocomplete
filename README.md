@@ -64,7 +64,7 @@ This is a simple search autocomplete application built with **React (TypeScript)
 
 ## Demo
 
-[Live Demo](https://autocompletesearchapp.vercel.app) _(Replace with actual link if deployed)_
+[Live Demo](https://autocompletesearchapp.vercel.app)
 
 ## License
 
@@ -74,7 +74,7 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 ### Author
 
-**Your Name**  
+**Huzefa Bin Juned**  
 [GitHub](https://github.com/huzefajuned/search-autocomplete) | [LinkedIn](https://www.linkedin.com/in/huzefabinjuned)
 
 Feel free to contribute or open issues for improvements!
