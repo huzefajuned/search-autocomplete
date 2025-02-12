@@ -55,6 +55,8 @@ function App() {
   }, [input]);
 
   console.log("cache :", cache);
+
+  
   return (
     <div className="font-mono p-4 h-screen w-screen flex flex-col items-center bg-black">
       {/* Search Input */}
